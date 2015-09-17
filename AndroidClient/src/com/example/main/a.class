@@ -1,0 +1,294 @@
+import android.graphics.Rect;
+
+public enum a
+{
+  private float e;
+  
+  static
+  {
+    a[] arrayOfa = new a[4];
+    arrayOfa[0] = a;
+    arrayOfa[1] = b;
+    arrayOfa[2] = c;
+    arrayOfa[3] = d;
+    g = arrayOfa;
+  }
+  
+  private static float a(float paramFloat1, Rect paramRect, float paramFloat2, float paramFloat3)
+  {
+    float f1 = (1.0F / 1.0F);
+    if (paramFloat1 - paramRect.left < paramFloat2) {
+      return paramRect.left;
+    }
+    if (paramFloat1 >= c.a() - 40.0F) {}
+    for (float f2 = c.a() - 40.0F;; f2 = f1)
+    {
+      if ((c.a() - paramFloat1) / paramFloat3 <= 40.0F) {
+        f1 = c.a() - 40.0F * paramFloat3;
+      }
+      return Math.min(paramFloat1, Math.min(f2, f1));
+    }
+  }
+  
+  private boolean a(float paramFloat1, float paramFloat2, float paramFloat3, float paramFloat4, Rect paramRect)
+  {
+    return (paramFloat1 < paramRect.top) || (paramFloat2 < paramRect.left) || (paramFloat3 > paramRect.bottom) || (paramFloat4 > paramRect.right);
+  }
+  
+  public static float b()
+  {
+    return c.a() - a.a();
+  }
+  
+  private static float b(float paramFloat1, Rect paramRect, float paramFloat2, float paramFloat3)
+  {
+    float f1 = (1.0F / -1.0F);
+    if (paramRect.right - paramFloat1 < paramFloat2) {
+      return paramRect.right;
+    }
+    if (paramFloat1 <= 40.0F + a.a()) {}
+    for (float f2 = 40.0F + a.a();; f2 = f1)
+    {
+      if ((paramFloat1 - a.a()) / paramFloat3 <= 40.0F) {
+        f1 = a.a() + 40.0F * paramFloat3;
+      }
+      return Math.max(paramFloat1, Math.max(f2, f1));
+    }
+  }
+  
+  public static float c()
+  {
+    return d.a() - b.a();
+  }
+  
+  private static float c(float paramFloat1, Rect paramRect, float paramFloat2, float paramFloat3)
+  {
+    float f1 = (1.0F / 1.0F);
+    if (paramFloat1 - paramRect.top < paramFloat2) {
+      return paramRect.top;
+    }
+    if (paramFloat1 >= d.a() - 40.0F) {}
+    for (float f2 = d.a() - 40.0F;; f2 = f1)
+    {
+      if (paramFloat3 * (d.a() - paramFloat1) <= 40.0F) {
+        f1 = d.a() - 40.0F / paramFloat3;
+      }
+      return Math.min(paramFloat1, Math.min(f2, f1));
+    }
+  }
+  
+  private static float d(float paramFloat1, Rect paramRect, float paramFloat2, float paramFloat3)
+  {
+    float f1 = (1.0F / -1.0F);
+    if (paramRect.bottom - paramFloat1 < paramFloat2) {
+      return paramRect.bottom;
+    }
+    if (paramFloat1 <= 40.0F + b.a()) {}
+    for (float f2 = 40.0F + b.a();; f2 = f1)
+    {
+      if (paramFloat3 * (paramFloat1 - b.a()) <= 40.0F) {
+        f1 = b.a() + 40.0F / paramFloat3;
+      }
+      return Math.max(paramFloat1, Math.max(f1, f2));
+    }
+  }
+  
+  public static a[] d()
+  {
+    a[] arrayOfa1 = g;
+    int i = arrayOfa1.length;
+    a[] arrayOfa2 = new a[i];
+    System.arraycopy(arrayOfa1, 0, arrayOfa2, 0, i);
+    return arrayOfa2;
+  }
+  
+  public float a()
+  {
+    return this.e;
+  }
+  
+  public float a(Rect paramRect)
+  {
+    float f1 = this.e;
+    switch (e()[ordinal()])
+    {
+    }
+    for (;;)
+    {
+      return this.e - f1;
+      this.e = paramRect.left;
+      continue;
+      this.e = paramRect.top;
+      continue;
+      this.e = paramRect.right;
+      continue;
+      this.e = paramRect.bottom;
+    }
+  }
+  
+  public void a(float paramFloat)
+  {
+    this.e = paramFloat;
+  }
+  
+  public void a(float paramFloat1, float paramFloat2, Rect paramRect, float paramFloat3, float paramFloat4)
+  {
+    switch (e()[ordinal()])
+    {
+    default: 
+      return;
+    case 1: 
+      this.e = a(paramFloat1, paramRect, paramFloat3, paramFloat4);
+      return;
+    case 2: 
+      this.e = c(paramFloat2, paramRect, paramFloat3, paramFloat4);
+      return;
+    case 3: 
+      this.e = b(paramFloat1, paramRect, paramFloat3, paramFloat4);
+      return;
+    }
+    this.e = d(paramFloat2, paramRect, paramFloat3, paramFloat4);
+  }
+  
+  public boolean a(a parama, Rect paramRect, float paramFloat)
+  {
+    float f1 = parama.b(paramRect);
+    switch (e()[ordinal()])
+    {
+    }
+    do
+    {
+      do
+      {
+        do
+        {
+          do
+          {
+            return true;
+            if (parama.equals(b))
+            {
+              float f23 = paramRect.top;
+              float f24 = d.a() - f1;
+              float f25 = c.a();
+              return a(f23, i.b(f23, f25, f24, paramFloat), f24, f25, paramRect);
+            }
+          } while (!parama.equals(d));
+          float f20 = paramRect.bottom;
+          float f21 = b.a() - f1;
+          float f22 = c.a();
+          return a(f21, i.b(f21, f22, f20, paramFloat), f20, f22, paramRect);
+          if (parama.equals(a))
+          {
+            float f17 = paramRect.left;
+            float f18 = c.a() - f1;
+            float f19 = d.a();
+            return a(i.c(f17, f18, f19, paramFloat), f17, f19, f18, paramRect);
+          }
+        } while (!parama.equals(c));
+        float f14 = paramRect.right;
+        float f15 = a.a() - f1;
+        float f16 = d.a();
+        return a(i.c(f15, f14, f16, paramFloat), f15, f16, f14, paramRect);
+        if (parama.equals(b))
+        {
+          float f11 = paramRect.top;
+          float f12 = d.a() - f1;
+          float f13 = a.a();
+          return a(f11, f13, f12, i.d(f13, f11, f12, paramFloat), paramRect);
+        }
+      } while (!parama.equals(d));
+      float f8 = paramRect.bottom;
+      float f9 = b.a() - f1;
+      float f10 = a.a();
+      return a(f9, f10, f8, i.d(f10, f9, f8, paramFloat), paramRect);
+      if (parama.equals(a))
+      {
+        float f5 = paramRect.left;
+        float f6 = c.a() - f1;
+        float f7 = b.a();
+        return a(f7, f5, i.e(f5, f7, f6, paramFloat), f6, paramRect);
+      }
+    } while (!parama.equals(c));
+    float f2 = paramRect.right;
+    float f3 = a.a() - f1;
+    float f4 = b.a();
+    return a(f4, f3, i.e(f3, f4, f2, paramFloat), f2, paramRect);
+  }
+  
+  public boolean a(Rect paramRect, float paramFloat)
+  {
+    boolean bool = true;
+    switch (e()[ordinal()])
+    {
+    default: 
+      bool = false;
+    }
+    do
+    {
+      do
+      {
+        do
+        {
+          do
+          {
+            return bool;
+          } while (this.e - paramRect.left < paramFloat);
+          return false;
+        } while (this.e - paramRect.top < paramFloat);
+        return false;
+      } while (paramRect.right - this.e < paramFloat);
+      return false;
+    } while (paramRect.bottom - this.e < paramFloat);
+    return false;
+  }
+  
+  public float b(Rect paramRect)
+  {
+    float f1 = this.e;
+    float f2;
+    switch (e()[ordinal()])
+    {
+    default: 
+      f2 = f1;
+    }
+    for (;;)
+    {
+      return f2 - f1;
+      f2 = paramRect.left;
+      continue;
+      f2 = paramRect.top;
+      continue;
+      f2 = paramRect.right;
+      continue;
+      f2 = paramRect.bottom;
+    }
+  }
+  
+  public void b(float paramFloat)
+  {
+    this.e = (paramFloat + this.e);
+  }
+  
+  public void c(float paramFloat)
+  {
+    float f1 = a.a();
+    float f2 = b.a();
+    float f3 = c.a();
+    float f4 = d.a();
+    switch (e()[ordinal()])
+    {
+    default: 
+      return;
+    case 1: 
+      this.e = i.b(f2, f3, f4, paramFloat);
+      return;
+    case 2: 
+      this.e = i.c(f1, f3, f4, paramFloat);
+      return;
+    case 3: 
+      this.e = i.d(f1, f2, f4, paramFloat);
+      return;
+    }
+    this.e = i.e(f1, f2, f3, paramFloat);
+  }
+}

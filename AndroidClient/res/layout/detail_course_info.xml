@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/detail_course_rlyt_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@id/detail_course_info_llyt_body"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip" >
+
+                <TextView
+                    style="@style/general_list_tab_blue"
+                    android:text="课堂信息" />
+
+                <LinearLayout style="@style/detail_course_item_layout" >
+
+                    <TextView
+                        style="@style/detail_course_left_text"
+                        android:drawableLeft="@drawable/ic_detail_course_name_icon"
+                        android:text="@string/course_info_course_name" />
+
+                    <TextView
+                        android:id="@id/course_info_txv_courseName"
+                        style="@style/detail_course_right_text"
+                        android:text="" />
+
+                    <Button
+                        android:id="@+id/course_info_btn_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/common_white_selector"
+                        android:paddingLeft="16.0dip"
+                        android:paddingRight="16.0dip"
+                        android:text="@string/general_edit"
+                        android:textColor="@color/deep_grey"
+                        android:textSize="14.0dip" 
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+                <LinearLayout style="@style/detail_course_item_layout" >
+
+                    <TextView
+                        style="@style/detail_course_left_text"
+                        android:drawableLeft="@drawable/ic_detail_course_classroom_icon"
+                        android:text="@string/course_info_classroom" />
+
+                    <TextView
+                        android:id="@id/course_info_txv_classroom"
+                        style="@style/detail_course_right_text"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/detail_course_item_layout" >
+
+                    <TextView
+                        style="@style/detail_course_left_text"
+                        android:drawableLeft="@drawable/ic_detail_course_teacher_icon"
+                        android:text="@string/course_info_teacher" />
+
+                    <TextView
+                        android:id="@id/course_info_txv_teacherName"
+                        style="@style/detail_course_right_text"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/detail_course_item_layout" >
+
+                    <TextView
+                        style="@style/detail_course_left_text"
+                        android:drawableLeft="@drawable/ic_detail_course_section_icon"
+                        android:text="@string/course_info_section" />
+
+                    <TextView
+                        android:id="@+id/course_info_txv_section"
+                        style="@style/detail_course_right_text"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/detail_course_item_layout" >
+
+                    <TextView
+                        style="@style/detail_course_left_text"
+                        android:drawableLeft="@drawable/ic_detail_course_week_icon"
+                        android:text="@string/course_info_weeks" />
+
+                    <TextView
+                        android:id="@id/course_info_txv_week"
+                        style="@style/detail_course_right_text"
+                        android:text="" />
+
+                    <ImageButton
+                        android:id="@id/course_info_imgvbtn_attention"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8.0dip"
+                        android:background="@color/lucency_black"
+                        android:src="@drawable/btn_attention_selector"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/general_list_tab_blue"
+                    android:text="上课时间" />
+
+                <LinearLayout style="@style/detail_course_item_layout" >
+
+                    <TextView
+                        style="@style/detail_course_left_text"
+                        android:drawableLeft="@drawable/ic_detail_course_time_icon"
+                        android:text="@string/course_info_time" />
+
+                    <TextView
+                        android:id="@id/course_info_txv_courseTime"
+                        style="@style/detail_course_right_text"
+                        android:text="@string/course_info_no_content"
+                        android:textColor="@color/detail_course_no_content" />
+
+                    <Button
+                        android:id="@id/course_info_btn_set_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/common_white_selector"
+                        android:gravity="center"
+                        android:paddingLeft="16.0dip"
+                        android:paddingRight="16.0dip"
+                        android:singleLine="true"
+                        android:text="@string/general_edit"
+                        android:textColor="@color/deep_grey"
+                        android:textSize="14.0dip" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="34.0dip" >
+
+                    <LinearLayout
+                        android:id="@id/course_info_llyt_classmates"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal" />
+
+                    <ProgressBar
+                        android:id="@id/course_info_classmates_progress"
+                        android:layout_width="24.0dip"
+                        android:layout_height="24.0dip"
+                        android:layout_centerVertical="true"
+                        android:indeterminateDrawable="@drawable/progress_drawable"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/general_list_tab_blue"
+                    android:text="给老师的评价" />
+
+                <TextView
+                    style="@style/detail_course_left_text"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10.0dip"
+                    android:drawableLeft="@drawable/ic_detail_course_evaluate_icon"
+                    android:text="@string/course_info_evaluate" />
+
+                <LinearLayout
+                    style="@style/detail_course_item_layout"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30.0dip"
+                    android:layout_marginTop="4.0dip"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@id/course_info_btn_support_course"
+                        android:layout_width="0.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/btn_course_support_selector"
+                        android:clickable="true"
+                        android:drawableLeft="@drawable/ic_course_like"
+                        android:gravity="center"
+                        android:paddingLeft="12.0dip"
+                        android:text="0"
+                        android:textColor="@color/btn_detail_course_support_text"
+                        android:textSize="14.0dip" />
+
+                    <Button
+                        android:id="@id/course_info_btn_nonsupport_course"
+                        android:layout_width="0.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="12.0dip"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/btn_course_nonsupport_selector"
+                        android:clickable="true"
+                        android:drawableLeft="@drawable/ic_course_unlike"
+                        android:gravity="center"
+                        android:paddingLeft="12.0dip"
+                        android:text="0"
+                        android:textColor="@color/btn_detail_course_nonsupport_text"
+                        android:textSize="14.0dip" />
+
+                    <View
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/general_list_tab_red"
+                    android:layout_marginTop="0.0dip"
+                    android:text="" />
+
+                <RelativeLayout
+                    android:id="@id/edit_course_rlyt_delete_course"
+                    style="@style/general_item_layout_bottom" >
+
+                    <TextView
+                        android:id="@id/setting_txv_logout_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@drawable/ic_detail_course_delete_icon"
+                        android:drawablePadding="7.0dip"
+                        android:text="@string/edit_course_delete_course"
+                        android:textColor="@color/list_tab_red"
+                        android:textSize="18.0dip" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="25.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

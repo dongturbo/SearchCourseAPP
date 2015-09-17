@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/root_rlyt"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    tools:ignore="ContentDescription" >
+
+    <RelativeLayout
+        android:id="@id/rlyt_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@id/rlyt_title_bar"
+            android:layout_centerHorizontal="true"
+            layout="@layout/rlyt_title_bar" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/main_course_rlyt_week_course"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/rlyt_title"
+        android:background="@color/lucency_black"
+        android:visibility="visible" >
+        <LinearLayout
+            android:id="@id/week_course_rlyt_sticky"
+            android:layout_width="fill_parent"
+            android:layout_height="36.0dip"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@id/week_course_rlyt_day_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="18.0dip"
+                android:background="@color/week_course_bg_color" >
+
+                <TextView
+                    android:id="@id/week_course_txv_month"
+                    android:layout_width="30.0dip"
+                    android:layout_height="21.0dip"
+                    android:gravity="center"
+                    android:textColor="@color/week_course_week_txv"
+                    android:textSize="12.0dip" />
+
+                <TextView
+                    android:id="@id/week_course_day_divider_right"
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="29.0dip"
+                    android:background="@color/week_course_no_course_divider" />
+
+                <GridView
+                    android:id="@id/week_course_gv_dayOfMonth"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="30.0dip"
+                    android:background="@color/week_course_week_txv"
+                    android:columnWidth="41.5dp"
+                    android:fadingEdge="none"
+                    android:gravity="center"
+                    android:horizontalSpacing="0.8dip"
+                    android:listSelector="@color/lucency_black"
+                    android:numColumns="7"
+                    android:scrollbars="none"
+                    android:stretchMode="none"
+                    android:verticalSpacing="0.0dip" 
+                    android:visibility="gone"/>
+            </RelativeLayout>
+            <!-- 年月日的标签 -->
+
+            <RelativeLayout
+                android:id="@+id/course_top"
+                android:layout_width="fill_parent"
+                android:layout_height="18.0dip"
+                android:layout_margin="0.0dip"
+                android:background="@color/week_course_bg_color"
+                android:padding="0.0dip" >
+
+                <GridView
+                    android:id="@id/week_course_gv_week"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="30.0dip"
+                    android:background="@color/week_course_week_txv"
+                    android:columnWidth="41.5dp"
+                    android:fadingEdge="none"
+                    android:gravity="center"
+                    android:horizontalSpacing="0.8dip"
+                    android:listSelector="@color/lucency_black"
+                    android:numColumns="7"
+                    android:scrollbars="none"
+                    android:stretchMode="none"
+                    android:verticalSpacing="0.0dip"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@id/week_course_week_divider_bottom"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2.0px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="0.0dip"
+                    android:background="@color/week_course_no_course_divider"
+                    android:padding="0.0dip" />
+
+                <TextView
+                    android:id="@id/week_course_week_divider_right"
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="29.0dip"
+                    android:background="@color/week_course_no_course_divider" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

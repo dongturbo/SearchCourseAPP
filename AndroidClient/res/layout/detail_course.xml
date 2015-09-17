@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black" >
+
+    <RelativeLayout
+        android:id="@id/rlyt_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" >
+
+        <include
+            android:id="@id/rlyt_title_bar"
+            layout="@layout/rlyt_title_bar" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/detail_course_rlyt_body"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/rlyt_title"
+        android:background="@color/background" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/background" />
+
+        <RelativeLayout
+            android:id="@id/detail_course_rlyt_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <include
+                android:id="@id/detail_course_info"
+                layout="@layout/detail_course_info" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@id/rlyt_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" >
+
+        <include
+            android:id="@id/rlyt_title_bar"
+            layout="@layout/rlyt_title_bar" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/classroom_building_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/rlyt_title"
+        android:background="@color/background" >
+
+        <ListView
+            android:id="@+id/classroom_building_Info"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:listSelector="@android:color/transparent"
+            android:scrollingCache="false" />
+    </RelativeLayout>
+
+</RelativeLayout>

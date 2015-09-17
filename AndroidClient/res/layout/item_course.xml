@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/rlyt_root"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/lstv_item_selector_16"
+    android:descendantFocusability="blocksDescendants" >
+
+    <LinearLayout
+        android:id="@id/select_course_item_content_right"
+        android:layout_width="114.0dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="14.0dip"
+        android:orientation="vertical"
+        android:paddingRight="16.0dip" >
+
+        <!-- <TextView
+            android:id="@id/select_course_txv_student_count"
+            style="@style/detail_course_left_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_course_classmate_icon"
+            android:text="@string/student_count"
+            android:textColor="@color/list_tab"
+            android:textSize="12.0dip" /> -->
+
+        <Button
+            android:id="@id/select_course_btn_control"
+            android:layout_width="wrap_content"
+            android:layout_height="28.0dip"
+            android:layout_gravity="right"
+            android:layout_marginTop="20.0dip"
+            android:background="@drawable/btn_select_add_course_selector"
+            android:focusable="false"
+            android:minWidth="80.0dip"
+            android:paddingLeft="16.0dip"
+            android:paddingRight="16.0dip"
+            android:text="@string/course_add_course"
+            android:textColor="@color/white"
+            android:textSize="12.0dip" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@id/select_course_rlyt_course_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/select_course_item_content_right" >
+
+        <RelativeLayout
+            android:id="@id/select_course_rlyt_course_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8.0dip"
+            android:layout_marginTop="8.0dip" >
+
+            <ImageView
+                android:id="@id/select_course_imgv_course_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8.0dip"
+                android:src="@drawable/ic_recommended_icon"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@id/select_course_txv_course_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/select_course_imgv_course_state"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip"
+
+                android:textColor="@color/select_course_name"
+                android:textSize="18.0dip" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@id/select_course_rlyt_courseMsg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/select_course_rlyt_course_name"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginTop="2.0dip"
+            android:background="@color/lucency_white"
+            android:orientation="vertical"
+            android:paddingBottom="8.0dip" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2.0dip" >
+
+                <TextView
+                    android:id="@id/select_course_txv_teacherName_1"
+                    style="@style/normal_drawable_left_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_course_teacher_icon"
+                    android:text="@string/course_teacher"
+                    android:textColor="@color/select_course_teacher"
+                    android:textSize="12.0dip" />
+
+                <TextView
+                    android:id="@id/select_course_txv_teacherName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/select_course_txv_teacherName_1"
+                    android:textColor="@color/select_course_teacher"
+                    android:textSize="12.0dip" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2.0dip" >
+
+                <TextView
+                    android:id="@id/select_course_txv_classroom_1"
+                    style="@style/normal_drawable_left_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_course_classroom_icon"
+                    android:text="@string/course_classroom"
+                    android:textColor="@color/select_course_teacher"
+                    android:textSize="12.0dip" />
+
+                <TextView
+                    android:id="@id/select_course_txv_classroom"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/select_course_txv_classroom_1"
+                    android:textColor="@color/select_course_teacher"
+                    android:textSize="12.0dip" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2.0dip" >
+
+                <TextView
+                    android:id="@id/select_course_txv_section_1"
+                    style="@style/normal_drawable_left_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_course_section_icon"
+                    android:maxLines="1"
+                    android:text="@string/course_section"
+                    android:textColor="@color/select_course_teacher"
+                    android:textSize="12.0dip" />
+
+                <TextView
+                    android:id="@id/select_course_txv_section"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/select_course_txv_section_1"
+                    android:textColor="@color/select_course_teacher"
+                    android:textSize="12.0dip" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2.0dip" >
+
+                <TextView
+                    android:id="@id/select_course_txv_week_1"
+                    style="@style/normal_drawable_left_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_course_week_icon"
+                    android:maxLines="1"
+                    android:text="@string/course_week"
+                    android:textColor="@color/select_course_teacher"
+                    android:textSize="12.0dip" />
+
+                <TextView
+                    android:id="@id/select_course_txv_week"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/select_course_txv_week_1"
+                    android:textColor="@color/select_course_teacher"
+                    android:textSize="12.0dip" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

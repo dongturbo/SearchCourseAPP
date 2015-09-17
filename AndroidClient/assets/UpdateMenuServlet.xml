@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<courselist>
+<course>
+<courseId>1</courseId>
+<courseName>桥梁工程（A）</courseName>
+<courseNum>L010101</courseNum>
+<teacherName>靳明君</teacherName>
+<courseTime>3-4节</courseTime>
+<week>2</week>
+<weekNum>1-14周</weekNum>
+<coursePlace>土202</coursePlace>
+</course>
+<course>
+<courseId>2</courseId>
+<courseName>桥梁工程（A）</courseName>
+<courseNum>L010101</courseNum>
+<teacherName>靳明君</teacherName>
+<courseTime>3-4节</courseTime>
+<week>5</week>
+<weekNum>1-14周</weekNum>
+<coursePlace>土202</coursePlace>
+</course>
+</courselist>

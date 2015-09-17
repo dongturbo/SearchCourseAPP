@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/root_rlyt"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black" >
+
+    <RelativeLayout
+        android:id="@id/rlyt_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" >
+
+        <include
+            android:id="@id/rlyt_title_bar"
+            layout="@layout/rlyt_title_bar" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/rlyt_title"
+        android:background="@color/background"
+        android:clickable="true" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip" >
+                
+
+
+                <TextView
+                    style="@style/general_list_tab_blue"
+                    android:text="课表设置" 
+                    android:visibility="gone"/>
+
+                <RelativeLayout
+                    android:id="@id/setting_rlyt_switch_semester"
+                    style="@style/general_item_layout_top" >
+
+                    <TextView
+                        android:id="@id/setting_txv_switch_semester_tip"
+                        style="@style/general_left_text"
+                        android:drawableLeft="@drawable/ic_setting_switch_semester_icon"
+                        android:text="@string/settings_switch_semester" />
+
+                    <TextView
+                        android:id="@id/setting_txv_switch_semester"
+                        style="@style/general_right_text" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/setting_rlyt_cur_week"
+                    style="@style/general_item_layout_middle" >
+
+                    <TextView
+                        android:id="@id/setting_txv_cur_week_tip"
+                        style="@style/general_left_text"
+                        android:drawableLeft="@drawable/ic_setting_now_week_icon"
+                        android:text="@string/settings_week_tip" />
+
+                    <TextView
+                        android:id="@id/setting_txv_cur_week"
+                        style="@style/general_right_text"
+                        android:text="@string/settings_week_tip" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/setting_rlyt_maxcount"
+                    style="@style/general_item_layout_middle" >
+
+                    <TextView
+                        android:id="@id/setting_txv_maxcount_tip"
+                        style="@style/general_left_text"
+                        android:drawableLeft="@drawable/ic_setting_maxcount_icon"
+                        android:text="@string/settings_maxCount" />
+
+                    <TextView
+                        android:id="@id/setting_txv_maxcount"
+                        style="@style/general_right_text"
+                        android:text="@string/settings_section_tip" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/setting_rlyt_weekStart"
+                    style="@style/general_item_layout_bottom" 
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@id/setting_txv_weekStart_tip"
+                        style="@style/general_left_text"
+                        android:drawableLeft="@drawable/ic_setting_week_start_icon"
+                        android:text="@string/settings_weekStart" />
+
+                    <TextView
+                        android:id="@id/setting_txv_weekStart"
+                        style="@style/general_right_text"
+                        android:text="@string/settings_weekStart_tip" />
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/general_list_tab_blue"
+                    android:text="其它" />
+
+                <RelativeLayout
+                    android:id="@id/setting_rlyt_notice"
+                    style="@style/general_item_layout_top" >
+
+                    <TextView
+                        android:id="@id/setting_txv_notice_tip"
+                        style="@style/general_left_text"
+                        android:drawableLeft="@drawable/ic_setting_notification_icon"
+                        android:text="@string/setting_notice_center" />
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@id/setting_rlyt_software_about"
+                    style="@style/general_item_layout_middle" >
+
+                    <TextView
+                        style="@style/general_left_text"
+                        android:drawableLeft="@drawable/ic_setting_software_about_icon"
+                        android:text="@string/setting_software_about" />
+
+                    <TextView
+                        android:id="@id/setting_txv_software_about_tip"
+                        style="@style/tips_new"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@id/setting_rlyt_logout"
+                    style="@style/general_item_layout_bottom" 
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@id/setting_txv_logout_tip"
+                        style="@style/general_left_text"
+                        android:drawableLeft="@drawable/ic_setting_exit_icon"
+                        android:text="@string/setting_logout"
+                        android:textColor="@color/dlg_red" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="25.0dip" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

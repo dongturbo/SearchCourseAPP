@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >  
+  <item android:state_focused="true" android:drawable="@drawable/add">  
+      
+        <shape>  
+            <solid  />  
+            <stroke  
+                android:width="0.8dp"  
+                android:color="#a8abad"                                 
+                />                  
+        </shape>   		
+    </item>     
+  
+    <item  
+        android:left="0dp"  
+        android:bottom="0dp">  
+        <shape>  
+            <solid android:color="@android:color/transparent" />  
+            <stroke  
+                android:width="0.8dp"  
+                android:color="#ffffff" 
+                />  
+        </shape>   
+    </item> 
+    
+     
+     
+</selector>
+
+    
+

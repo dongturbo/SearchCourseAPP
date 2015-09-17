@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/class_number"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/week_course_bg_color"
+        android:gravity="center|center_vertical|center_horizontal"
+        android:layout_gravity="center|center_vertical|center_horizontal"
+        android:textColor="@color/week_course_week_txv"
+        android:textSize="12.0dip" />
+
+</LinearLayout>

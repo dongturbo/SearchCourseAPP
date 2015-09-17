@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/wheel_view_llyt"
+    android:layout_width="296.0dip"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:background="@drawable/ic_dlg_background"
+    android:clickable="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8.0dip"
+        android:paddingTop="12.0dip" >
+
+        <TextView
+            android:id="@id/wheel_view_txv_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:text="@string/add_course_section_tip"
+            android:textColor="@color/dlg_title"
+            android:textSize="16.0dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/wheel_view_rlyt_body"
+        android:layout_width="fill_parent"
+        android:layout_height="158.0dip" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_picker_bar" />
+
+            <LinearLayout
+                android:id="@id/wheel_view_llyt_wheels"
+                android:layout_width="fill_parent"
+                android:layout_height="158.0dip"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="4.0dip"
+                android:paddingTop="4.0dip" >
+
+                <com.example.wheelview.WheelView
+                    android:id="@+id/wheel_view_left"
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/dlg_blue" />
+
+                <TextView
+                    android:layout_width="1.0dp"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/ic_wheel_divider" />
+
+                <com.example.wheelview.WheelView
+                    android:id="@+id/wheel_view_center"
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:textColor="@color/dlg_blue" />
+
+                <TextView
+                    android:layout_width="1.0dp"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/ic_wheel_divider" />
+
+                <com.example.wheelview.WheelView
+                    android:id="@+id/wheel_view_right"
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_dlg_title_shadow"
+            android:contentDescription="@string/app_name_en"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@id/wheel_view_txv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginRight="16.0dip"
+            android:textColor="@color/grey"
+            android:textSize="12.0dip" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@drawable/dlg_line_repeat" />
+
+        <LinearLayout
+            android:id="@id/dlg_llyt_btns"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@id/wheel_view_btn_cancel"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/dlg_btn_left_selector"
+                android:gravity="center"
+                android:text="@string/general_cancle"
+                android:textColor="@color/dlg_blue"
+                android:textSize="16.0dip" />
+
+            <TextView
+                android:id="@id/dlg_txv_btnDivider"
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:background="@drawable/dlg_line_repeat" />
+
+            <Button
+                android:id="@id/wheel_view_btn_submit"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/dlg_btn_right_selector"
+                android:gravity="center"
+                android:text="@string/general_confirm"
+                android:textColor="@color/dlg_blue"
+                android:textSize="16.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

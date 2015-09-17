@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="296.0dip"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ic_dlg_background"
+    android:gravity="center_vertical|center_horizontal" >
+
+    <RelativeLayout
+        android:id="@id/dlg_rlyt_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ic_dlg_title_background"
+        android:paddingBottom="8.0dip"
+        android:paddingLeft="16.0dip"
+        android:paddingTop="12.0dip" >
+
+        <TextView
+            android:id="@id/dlg_txv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dlg_title"
+            android:layout_centerHorizontal="true"
+            android:textSize="18.0dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/dlg_rlyt_body_root"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dlg_rlyt_title" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@id/dlg_rlyt_body"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:orientation="vertical"
+                android:paddingBottom="4.0dip" >
+
+                <TextView
+                    android:id="@+id/confirm_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="@color/dark"
+                    android:textSize="16.dip" />
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lucency_black"
+            android:contentDescription="@string/app_name_en"
+            android:src="@drawable/ic_dlg_title_shadow"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dlg_rlyt_body_root"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@drawable/dlg_line_repeat" />
+
+        <LinearLayout
+            android:id="@id/dlg_llyt_btns"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@id/dlg_btn_cancel"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/dlg_btn_left_selector"
+                android:gravity="center"
+                android:text="@string/general_cancle"
+                android:textColor="@color/dlg_blue"
+                android:textSize="16.0dip" />
+
+            <TextView
+                android:id="@id/dlg_txv_btnDivider"
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:background="@drawable/dlg_line_repeat" />
+
+            <Button
+                android:id="@id/dlg_btn_sure"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/dlg_btn_right_selector"
+                android:gravity="center"
+                android:text="@string/general_confirm"
+                android:textColor="@color/dlg_blue"
+                android:textSize="16.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
