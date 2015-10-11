@@ -1,5 +1,5 @@
 # SearchCourseAPP
-android application and server
+android application and server，课程表应用，课程表
 有客户端和服务器端，客户端中包括课程表格，课程查询，教室查询等，这些需要服务器端有数据库来存储这些信息
 下面是一些界面：
 ![1](http://7xnfgl.com1.z0.glb.clouddn.com/幻灯片2.PNG)
